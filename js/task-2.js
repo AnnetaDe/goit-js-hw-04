@@ -1,46 +1,66 @@
 
-//Напиши функцію calcAverageCalories(days),яка повертає середньодобове значення кількості калорій,які спортсмен споживав протягом тижня.
-//Функція очікує один параметр: days — масив об’єктів.Кожен об’єкт описує день тижня та кількість калорій calories,спожитих спортсменом,у цей день.
-//Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.У консоль будуть виведені результати її викликів.
+////Напиши функцію calcAverageCalories(days),яка повертає середньодобове значення кількості калорій,які спортсмен споживав протягом тижня.
+////Функція очікує один параметр: days — масив об’єктів.Кожен об’єкт описує день тижня та кількість калорій calories,спожитих спортсменом,у цей день.
+////Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.У консоль будуть виведені результати її викликів.
 
-function calcAverageCalories(days) {
-    let sum=0;
-    if (days.length===0) {
-        return 0;
-    }
-    for (day of days) {
+//function calcAverageCalories(days) {
+//    let sum=0;
+//    if (days.length===0) {
+//        return 0;
+//    }
+//    for (day of days) {
 
-     sum+=day.calories
-    }
-    return sum / days.length;
-}
+//     sum+=day.calories
+//    }
+//    return sum / days.length;
+//}
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 3010 },
-    { day: "tuesday", calories: 3200 },
-    { day: "wednesday", calories: 3120 },
-    { day: "thursday", calories: 2900 },
-    { day: "friday", calories: 3450 },
-    { day: "saturday", calories: 3280 },
-    { day: "sunday", calories: 3300 }
-  ])
-); // 3180
+//console.log(
+//  calcAverageCalories([
+//    { day: "monday", calories: 3010 },
+//    { day: "tuesday", calories: 3200 },
+//    { day: "wednesday", calories: 3120 },
+//    { day: "thursday", calories: 2900 },
+//    { day: "friday", calories: 3450 },
+//    { day: "saturday", calories: 3280 },
+//    { day: "sunday", calories: 3300 }
+//  ])
+//); // 3180
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 2040 },
-    { day: "tuesday", calories: 2270 },
-    { day: "wednesday", calories: 2420 },
-    { day: "thursday", calories: 1900 },
-    { day: "friday", calories: 2370 },
-    { day: "saturday", calories: 2280 },
-    { day: "sunday", calories: 2610 }
-  ])
-); // 2270
+//console.log(
+//  calcAverageCalories([
+//    { day: "monday", calories: 2040 },
+//    { day: "tuesday", calories: 2270 },
+//    { day: "wednesday", calories: 2420 },
+//    { day: "thursday", calories: 1900 },
+//    { day: "friday", calories: 2370 },
+//    { day: "saturday", calories: 2280 },
+//    { day: "sunday", calories: 2610 }
+//  ])
+//); // 2270
 
-console.log(
-  calcAverageCalories([])
-); // 0
+//console.log(
+//  calcAverageCalories([])
+//); // 0
 
 
+const pizzaPalace = {
+	pizzas: [
+		'Supercheese',
+		'Smoked',
+		'Four meats',
+	],
+	checkPizza(pizzaName) {
+		return this.includes(pizzaName);
+	},
+	order(pizzaName) {
+		const isPizzaAvailable =
+			checkPizza(pizzaName);
+
+		if (!isPizzaAvailable) {
+			return `Sorry, there is no pizza named «${pizzaName}»`;
+		}
+
+		return `Order accepted, preparing «${pizzaName}» pizza`;
+	},
+};
