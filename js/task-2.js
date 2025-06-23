@@ -4,16 +4,13 @@
 //Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.У консоль будуть виведені результати її викликів.
 
 function calcAverageCalories(days) {
-   let sum=0;
-  if (!days.length) {
-     return 'he didnt eat.'
-   }
- const total=days.forEach((day) => {
-    sum+=day.calories;
-  });
+  if (!days.length) return 0;
+
+  let sum = 0;
+  for (const day of days) {
+    sum += day.calories;
+  }
   return sum / days.length;
-  
-  
 }
 console.log(
  calcAverageCalories([
